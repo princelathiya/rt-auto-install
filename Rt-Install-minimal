@@ -499,10 +499,10 @@ function INSTALL_RUTORRENT {
 	# Installing rutorrent.
 	echo "${CYAN}Installing rutorrent${NORMAL}"
 	echo "${YELLOW}Downloading package${NORMAL}"
-	curl -L http://dl.bintray.com/novik65/generic/ruTorrent-3.7.zip -o rutorrent-3.7.zip
+	curl -L https://github.com/Novik/ruTorrent/archive/v3.10.tar.gz -o rutorrent-3.10.zip
 	CHECKLASTRC
 	echo "${YELLOW}Unpacking${NORMAL}"
-	unzip -qq rutorrent-3.7.zip
+	unzip -qq rutorrent-3.10.zip
 	CHECKLASTRC
 	echo "${YELLOW}Renaming${NORMAL}"
 	mv ruTorrent-master/ rutorrent
@@ -520,7 +520,7 @@ function INSTALL_RUTORRENT {
 	mv -f rutorrent /var/www/
 	CHECKLASTRC
 	echo "${YELLOW}Cleanup${NORMAL}"
-	rm rutorrent-3.7.zip
+	rm rutorrent-3.10.zip
 	CHECKLASTRC
 	if [ -d "$TEMP_PLUGIN_DIR" ]; then
 		mv -fv "$TEMP_PLUGIN_DIR"/* /var/www/rutorrent/plugins
