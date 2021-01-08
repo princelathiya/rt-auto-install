@@ -505,7 +505,7 @@ function INSTALL_RUTORRENT {
 	unzip -qq rutorrent-3.10.zip
 	CHECKLASTRC
 	echo "${YELLOW}Renaming${NORMAL}"
-	mv ruTorrent-master/ rutorrent
+	mv ruTorrent-3.10/ rutorrent
 	CHECKLASTRC
 	
 	if [ -d /var/www/rutorrent ]; then
